@@ -18,5 +18,6 @@ messages = messages.Restrict(f"[SenderEmailAddress] = '{email_address}'")
 
 # Print the body of each email
 for message in messages:
+    s = message.Subject
     m = message.Body
-    print(m)
+    print(s, m)
