@@ -3,7 +3,7 @@ import win32com.client as win32
 # Initiates xl application
 xl = win32.gencache.EnsureDispatch("Excel.Application")
 # Creates new workbook
-book = xl.Books.New()
+book = xl.Workbooks.Open()
 # Select which sheet to edit
 sheets = book.Worksheets("Sheet1")
 
