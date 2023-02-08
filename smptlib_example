@@ -1,0 +1,16 @@
+import smtplib
+
+mail = smtplib.SMTP("mail.gmail/btinternet.com", 587)
+sender = "my email address"
+password = "my password"
+mail.login(sender, password)
+mail.ehlo()
+mail.starttls()
+recipient = "recipient's address"
+msg_text = "email body text"
+msg = f"From: {sender}\r\nTo: {recipient}\r\n\r\n{msg_text}\r\n"
+mail.sendmail(sender, recipient, msg)
+mail.quit()
+
+
+# Returns an empty set if successful
